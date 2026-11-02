@@ -16,5 +16,8 @@
 
 **方式一：使用内置打包脚本**
 使用termux运行打包脚本即可 脚本有详细的打包引导，生成的 APK 文件位置可自定义。
+## 免责声明
+
+本项目仅用于学习与技术交流，界面风格参考微信，所有商标与品牌归腾讯所有；不包含任何微信官方代码或接口。
 <img width="1080" height="2400" alt="1000001492" src="https://github.com/user-attachments/assets/eb000d33-4614-4458-a31d-bdf619c5a2db" />
 <img width="1080" height="2400" alt="1000001491" src="https://github.com/user-attachments/assets/8b81219b-6d28-4050-b594-21b967920ba7" />
