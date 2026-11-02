@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:viewportWidth="24"
+    android:height="24dp" android:viewportHeight="24">
+    <!-- 对话气泡 + 星：提示词 -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M4,5.6h16a1.6,1.6 0,0 1,1.6 1.6v8a1.6,1.6 0,0 1,-1.6 1.6H9.4L5.4,20v-3.2H4a1.6,1.6 0,0 1,-1.6 -1.6v-8A1.6,1.6 0,0 1,4 5.6z" />
+    <path android:fillColor="#7C4DFF" android:pathData="M12,7.8l1.1,2.3l2.5,0.3l-1.8,1.7l0.4,2.5l-2.2,-1.2l-2.2,1.2l0.4,-2.5l-1.8,-1.7l2.5,-0.3z" />
+</vector>

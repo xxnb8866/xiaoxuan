@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chip"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_tag_chip"
+    android:gravity="center"
+    android:text="开心"
+    android:textColor="@color/wx_text_primary"
+    android:textSize="13sp" />

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">微信AI</string>
+
+    <string name="tab_chat">微信</string>
+    <string name="tab_contacts">通讯录</string>
+    <string name="tab_discover">发现</string>
+    <string name="tab_me">我</string>
+
+    <string name="search_hint">搜索</string>
+    <string name="send">发送</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+
+    <string name="msg_hint">发消息…</string>
+    <string name="press_to_talk">按住 说话</string>
+    <string name="release_to_send">松开 发送</string>
+
+    <string name="panel_photo">照片</string>
+    <string name="panel_camera">拍摄</string>
+    <string name="panel_redpacket">红包</string>
+    <string name="panel_transfer">转账</string>
+    <string name="panel_voice">语音输入</string>
+    <string name="panel_location">位置</string>
+    <string name="panel_favorite">收藏</string>
+    <string name="panel_file">文件</string>
+    <string name="panel_card">个人名片</string>
+
+    <string name="red_packet_title">发红包</string>
+    <string name="rp_amount_hint">总金额</string>
+    <string name="rp_count_hint">红包个数</string>
+    <string name="rp_wish_default">恭喜发财，大吉大利</string>
+    <string name="rp_wish_hint">留言</string>
+    <string name="rp_put">塞钱进红包</string>
+    <string name="rp_from">来自 %1$s 的红包</string>
+    <string name="rp_open">开</string>
+    <string name="rp_best_wish">祝你新年快乐</string>
+
+    <string name="transfer_title">转账</string>
+    <string name="transfer_amount_hint">转账金额</string>
+    <string name="transfer_note_hint">添加转账说明</string>
+    <string name="transfer_pay">确认转账</string>
+    <string name="transfer_wait_confirm">等待对方确认收款</string>
+    <string name="transfer_received">已收款</string>
+
+    <string name="settings_title">设置</string>
+    <string name="settings_model">模型设置</string>
+    <string name="settings_emoji">表情包管理</string>
+    <string name="settings_profile">个人信息</string>
+    <string name="settings_general">通用</string>
+    <string name="settings_privacy">隐私</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_clear_chat">清空聊天记录</string>
+
+    <string name="model_provider">模型厂商</string>
+    <string name="model_apikey">API Key</string>
+    <string name="model_apikey_hint">粘贴你的 API Key，仅保存在本机</string>
+    <string name="model_name">模型</string>
+    <string name="model_base_url">接口地址</string>
+    <string name="model_test">测试连接</string>
+    <string name="model_system_prompt">系统提示词</string>
+    <string name="model_temperature">温度</string>
+    <string name="model_stream">流式输出</string>
+    <string name="model_emotion">情绪识别（自动挑表情包）</string>
+
+    <string name="emoji_manage_title">表情包管理</string>
+    <string name="emoji_add">添加表情</string>
+    <string name="emoji_tag_hint">输入标签，逗号分隔</string>
+    <string name="emoji_empty">还没有自定义表情，点下方按钮从相册添加</string>
+    <string name="emoji_panel_empty">没有表情，去设置里添加</string>
+
+    <string name="moments">朋友圈</string>
+    <string name="moments_post">发表</string>
+    <string name="moments_thoughts">这一刻的想法…</string>
+
+    <string name="ai_name">AI 助手</string>
+    <string name="ai_typing">对方正在输入…</string>
+    <string name="net_error">网络请求失败：%1$s</string>
+    <string name="no_apikey">还没有配置 API Key，去「我 - 设置 - 模型设置」里填一下吧</string>
+
+    <string name="contact_ai_desc">你的智能助手</string>
+</resources>

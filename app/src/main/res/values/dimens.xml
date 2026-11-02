@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 结构 -->
+    <dimen name="actionbar_height">48dp</dimen>
+    <dimen name="nav_height">52dp</dimen>
+
+    <!-- 间距 -->
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+
+    <!-- 列表 -->
+    <dimen name="list_padding">16dp</dimen>
+    <dimen name="list_item_height">68dp</dimen>
+    <dimen name="list_divider_start">76dp</dimen>
+
+    <!-- 头像 -->
+    <dimen name="avatar_size">48dp</dimen>
+    <dimen name="avatar_size_small">40dp</dimen>
+    <dimen name="avatar_size_large">64dp</dimen>
+    <dimen name="avatar_radius">6dp</dimen>
+    <dimen name="avatar_radius_large">8dp</dimen>
+
+    <dimen name="bubble_radius">8dp</dimen>
+    <dimen name="title_bar_height">48dp</dimen>
+
+    <!-- 字号 -->
+    <dimen name="text_11">11sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+
+    <!-- 圆角 -->
+    <dimen name="radius_card">12dp</dimen>
+    <dimen name="radius_btn">6dp</dimen>
+    <dimen name="radius_bubble">8dp</dimen>
+    <dimen name="radius_panel">10dp</dimen>
+</resources>

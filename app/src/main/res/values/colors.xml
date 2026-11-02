@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ============ 微信主色系 ============ -->
+    <color name="wx_green">#07C160</color>
+    <color name="wx_green_dark">#06AD56</color>
+    <color name="wx_green_press">#059B4C</color>
+    <color name="wx_green_light">#95EC69</color>
+    <color name="wx_green_light_press">#89DC5F</color>
+    <color name="wx_green_bg">#E8F8EE</color>
+
+    <color name="wx_red">#FA5151</color>
+    <color name="wx_red_press">#E34B4B</color>
+    <color name="wx_orange">#FA9D3B</color>
+    <color name="wx_blue">#10AEFF</color>
+    <color name="wx_link">#576B95</color>
+
+    <!-- ============ 背景 ============ -->
+    <color name="wx_bg">#F4F5F6</color>
+    <color name="wx_bg_white">#F4F5F6</color>
+    <color name="wx_bg_gray">#EDEEF0</color>
+    <color name="wx_bg_press">#E4E6E9</color>
+    <color name="wx_bg_chat">#F4F5F6</color>
+    <color name="wx_bg_card">#FFFFFF</color>
+
+    <!-- ============ 文字 ============ -->
+    <color name="wx_text_primary">#181818</color>
+    <color name="wx_text_secondary">#7F7F7F</color>
+    <color name="wx_text_hint">#B2B2B2</color>
+    <color name="wx_text_white">#FFFFFF</color>
+    <color name="wx_text_tertiary">#9E9E9E</color>
+
+    <!-- ============ 分割线 ============ -->
+    <color name="wx_divider">#E4E4E4</color>
+    <color name="wx_divider_light">#F0F0F0</color>
+
+    <!-- ============ 导航栏 / Tab ============ -->
+    <color name="wx_nav_bg">#FAFAFA</color>
+    <color name="wx_nav_selected">#07C160</color>
+    <color name="wx_nav_normal">#7F7F7F</color>
+
+    <!-- ============ 顶部标题栏 ============ -->
+    <color name="wx_actionbar_bg">#F4F5F6</color>
+    <color name="wx_actionbar_bg_white">#FFFFFF</color>
+
+    <!-- ============ 气泡 ============ -->
+    <color name="bubble_in">#FFFFFF</color>
+    <color name="bubble_out">#95EC69</color>
+
+    <!-- ============ 红包 / 转账 ============ -->
+    <color name="rp_red_start">#FA5151</color>
+    <color name="rp_red_end">#E64340</color>
+    <color name="rp_gold">#F8D56A</color>
+    <color name="rp_card">#F5A623</color>
+    <color name="rp_orange_start">#FF8A3D</color>
+    <color name="rp_orange_end">#F56B1E</color>
+
+    <!-- ============ 头像预设色 ============ -->
+    <color name="avatar_blue">#5B8FF9</color>
+    <color name="avatar_green">#07C160</color>
+    <color name="avatar_yellow">#F6BD16</color>
+    <color name="avatar_orange">#E8684A</color>
+    <color name="avatar_cyan">#6DC8EC</color>
+    <color name="avatar_purple">#9270CA</color>
+    <color name="avatar_pink">#FF9D8A</color>
+    <color name="avatar_teal">#26A69A</color>
+    <color name="avatar_indigo">#5C6BC0</color>
+    <color name="avatar_brown">#8D6E63</color>
+
+    <!-- ============ 其它 ============ -->
+    <color name="mask">#99000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="wx_shadow">#14000000</color>
+    <color name="wx_shadow_soft">#0A000000</color>
+    <color name="wx_card">#FFFFFF</color>
+    <color name="wx_surface">#FFFFFF</color>
+    <color name="wx_surface_sunken">#FAFAFA</color>
+    <color name="wx_green_soft">#E9F7EF</color>
+    <color name="wx_green_mid">#1AAD19</color>
+</resources>

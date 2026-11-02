@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".ui.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.settings.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.settings.ModelSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.settings.ProactiveActivity" />
+        <activity android:name=".ui.settings.ProactiveEditActivity" />
+        <activity android:name=".ui.settings.MemoryActivity" />
+        <activity android:name=".ui.settings.ProfileEditActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.emoji.EmojiManageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.emoji.PhotoManageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.emoji.AddEmojiActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.pay.WalletActivity" />
+        <activity android:name=".ui.pay.RedPacketSendActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.pay.RedPacketOpenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme" />
+        <activity android:name=".ui.pay.TransferActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.moments.MomentsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.moments.PostMomentActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.contacts.AiEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.contacts.PromptManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.discover.ScanActivity"
+            android:screenOrientation="portrait" />
+        <receiver
+            android:name=".proactive.ProactiveReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wechat.ai.ACTION_PROACTIVE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

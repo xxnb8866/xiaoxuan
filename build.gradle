@@ -1,0 +1,61 @@
+/*
+ * 顶层构建脚本。
+ *
+ * 设计原则（针对 Termux / 一键打包脚本环境）：
+ *   1. 不写死 AGP 版本 —— 打包机上的 gradle 版本未知，按版本表自动适配
+ *   2. 纯离线决策，不做网络探测 —— 网络不良时会拖慢甚至误判
+ *   3. DSL 只用各版本通有的写法，避免被脚本的 DSL 自愈逻辑误伤
+ *
+ * 如需强制指定 AGP：gradle assembleDebug -Pagp=8.7.3
+ */
+
+buildscript {
+    List<String> candidates = null
+    try {
+        candidates = gradle.ext.agpCandidates
+    } catch (Throwable ignored) {
+    }
+    if (candidates == null || candidates.isEmpty()) {
+        candidates = ["8.7.3", "7.4.2"]
+    }
+
+    // 命令行强制指定：gradle assembleDebug -Pagp=8.7.3
+    String forced = null
+    try {
+        forced = project.hasProperty("agp") ? project.property("agp").toString() : null
+    } catch (Throwable ignored) {
+    }
+    if (forced != null && !forced.trim().isEmpty()) {
+        candidates = [forced.trim()]
+    }
+
+    String chosen = candidates[0]
+    ext.agpVersion = chosen
+    println "[build] Gradle " + gradle.gradleVersion + " -> AGP " + chosen
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${chosen}"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/*
+ * 兼容外部打包脚本可能传入的 -x lintVitalRelease / -x lintVitalDebug / -x test。
+ * AGP 9 已移除 lintVital* 任务，参数里的任务名若不存在，Gradle 会直接
+ * Selection failed 中止（连编译都不跑）。这里注册同名空任务兜底。
+ */
+["lintVitalRelease", "lintVitalDebug", "test"].each { String taskName ->
+    if (tasks.findByName(taskName) == null) {
+        tasks.register(taskName) {
+            group = "compat"
+            description = "空任务：兼容外部打包脚本的 -x ${taskName} 参数"
+        }
+    }
+}

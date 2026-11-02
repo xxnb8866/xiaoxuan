@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="30dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 麦克风主体 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,3.4a2.6,2.6 0,0 1,2.6 2.6v5a2.6,2.6 0,0 1,-5.2 0v-5A2.6,2.6 0,0 1,12 3.4z"
+        android:strokeColor="#181818"
+        android:strokeWidth="1.7" />
+    <!-- 支架弧 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M6.2,11.4a5.8,5.8 0,0 0,11.6 0"
+        android:strokeColor="#181818"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round" />
+    <!-- 底座 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,17.2v3.4M9,20.6h6"
+        android:strokeColor="#181818"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round" />
+</vector>

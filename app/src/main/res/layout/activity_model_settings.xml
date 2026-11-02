@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wx_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="返回"
+                android:padding="9dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/settings_model"
+                android:textColor="@color/wx_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.wechat.ai.widget.ConfirmButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:text="@string/save"
+                android:textColor="@color/wx_green"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- 厂商 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="6dp"
+            android:text="@string/model_provider"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/providers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:background="@color/wx_bg_white" />
+
+        <!-- API Key -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="6dp"
+            android:text="@string/model_apikey"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_key"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/wx_bg_white"
+            android:hint="@string/model_apikey_hint"
+            android:inputType="textVisiblePassword"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:textColor="@color/wx_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/key_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="6dp"
+            android:text="申请地址：platform.deepseek.com"
+            android:textColor="@color/wx_link"
+            android:textSize="12sp" />
+
+        <!-- 模型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="6dp"
+            android:text="@string/model_name"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="13sp" />
+
+        <Spinner
+            android:id="@+id/spinner_model"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/wx_bg_white"
+            android:paddingLeft="8dp" />
+
+        <EditText
+            android:id="@+id/et_model"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/wx_bg_white"
+            android:hint="自定义模型名（选填，填写后优先使用）"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColor="@color/wx_text_primary"
+            android:textSize="14sp" />
+
+        <!-- Base URL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="6dp"
+            android:text="@string/model_base_url"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_base_url"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/wx_bg_white"
+            android:hint="https://api.xxx.com/v1/chat/completions"
+            android:inputType="textUri"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:textColor="@color/wx_text_primary"
+            android:textSize="13sp" />
+
+        <!-- 温度 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/model_temperature"
+                android:textColor="@color/wx_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_temp_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:text="这是什么？"
+                android:textColor="@color/wx_link"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/wx_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <SeekBar
+                android:id="@+id/seek_temp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="20"
+                android:theme="@style/WxSeekBar" />
+
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="0.7"
+                android:textColor="@color/wx_text_primary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_temp_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/wx_bg_gray"
+            android:lineSpacingExtra="3dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="9dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="9dp"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="12sp" />
+
+        <!-- 系统提示词 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="6dp"
+            android:text="@string/model_system_prompt"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_system"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/wx_bg_white"
+            android:gravity="top"
+            android:hint="给 AI 一个人设"
+            android:padding="14dp"
+            android:textColor="@color/wx_text_primary"
+            android:textSize="14sp" />
+
+        <!-- 开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/wx_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/model_stream"
+                android:textColor="@color/wx_text_primary"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_stream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/wx_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/model_emotion"
+                android:textColor="@color/wx_text_primary"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_emotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_btn_green"
+            android:text="@string/model_test"
+            android:textColor="@color/wx_text_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="28dp"
+            android:text="Key 仅保存在本机 SharedPreferences，不会上传任何第三方。"
+            android:textColor="@color/wx_text_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

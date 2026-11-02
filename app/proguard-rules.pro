@@ -1,0 +1,3 @@
+-keepattributes Signature
+-keep class com.wechat.ai.model.** { *; }
+-dontwarn okhttp3.**

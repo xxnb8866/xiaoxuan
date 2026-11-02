@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/wx_green</item>
+        <item name="colorPrimaryDark">@color/wx_green_dark</item>
+        <item name="colorAccent">@color/wx_green</item>
+        <item name="android:windowBackground">@color/wx_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/wx_actionbar_bg</item>
+        <item name="android:navigationBarColor">@color/wx_nav_bg</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/wx_text_primary</item>
+        <item name="android:alertDialogTheme">@style/WxAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/WxAlertDialogTheme</item>
+    </style>
+
+
+    <!-- ============ 弹窗统一美化：圆角卡片 + 微信风格按钮 ============ -->
+    <style name="WxAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- 圆角白色卡片背景 -->
+        <item name="android:windowBackground">@drawable/bg_dialog_rounded</item>
+        <item name="android:background">@drawable/bg_dialog_rounded</item>
+        <item name="android:windowMinWidthMajor">78%</item>
+        <item name="android:windowMinWidthMinor">78%</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 去掉默认内边距，让内容自己控制留白，避免拥挤 -->
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <!-- 标题 -->
+        <item name="android:windowTitleStyle">@style/WxDialogTitle</item>
+        <item name="android:textColorPrimary">@color/wx_text_primary</item>
+        <item name="android:textColorSecondary">@color/wx_text_secondary</item>
+        <!-- 按钮区 -->
+        <item name="android:buttonBarStyle">@style/WxDialogButtonBar</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/WxDialogButton</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/WxDialogButtonGreen</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/WxDialogButton</item>
+    </style>
+
+    <style name="WxDialogTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">22dp</item>
+        <item name="android:paddingEnd">22dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="WxDialogButtonBar">
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="WxDialogButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+        <item name="android:background">@drawable/bg_dialog_btn_gray</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="WxDialogButtonGreen">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/wx_text_white</item>
+        <item name="android:background">@drawable/bg_dialog_btn_green</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- 顶部标题栏文字 -->
+    <style name="WxActionBarTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 列表主标题 -->
+    <style name="WxListTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 列表副标题 -->
+    <style name="WxListSub">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/wx_text_secondary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 分组头（通讯录用） -->
+    <style name="WxGroupHeader">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/wx_text_secondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 设置项左侧标签 -->
+    <style name="WxSettingsLabel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+    </style>
+
+    <!-- 次要说明文字 -->
+    <style name="WxHint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/wx_text_hint</item>
+    </style>
+
+    <!-- 主按钮（绿色） -->
+    <style name="WxButtonGreen">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/wx_text_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 开红包弹窗用：透明背景 -->
+    <style name="TransparentTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <!-- 绿色滑块 -->
+    <style name="WxSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="colorControlNormal">@color/wx_divider</item>
+        <item name="colorControlActivated">@color/wx_green</item>
+        <item name="colorControlHighlight">@color/wx_green</item>
+    </style>
+
+    <!-- 绿色开关 -->
+    <style name="WxSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorControlActivated">@color/wx_green</item>
+        <item name="colorSwitchThumbNormal">@color/wx_bg_white</item>
+        <item name="android:colorForeground">@color/wx_divider</item>
+    </style>
+
+    <!-- 支付键盘按键 -->
+    <style name="WxKey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_key</item>
+        <item name="android:textColor">@color/wx_text_primary</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

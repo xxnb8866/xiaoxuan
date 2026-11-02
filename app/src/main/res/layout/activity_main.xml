@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wx_bg">
+
+    <!-- ============ 内容区（顶部栏 + 页面） ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="@color/wx_actionbar_bg">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/WxActionBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="微信" />
+
+            <ImageView
+                android:id="@+id/action_plus"
+                android:layout_width="@dimen/actionbar_height"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="更多"
+                android:padding="12dp"
+                android:src="@drawable/ic_action_plus" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/wx_divider_light" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/wx_bg_white" />
+    </LinearLayout>
+
+    <!-- ============ 悬浮胶囊导航栏（指示器为浮层，不占宽度） ============ -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="14dp">
+
+        <!-- 滑动指示器：浮在胶囊之上，不参与胶囊测量，因此不改变胶囊尺寸 -->
+        <View
+            android:id="@+id/nav_indicator"
+            android:layout_width="62dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_nav_indicator"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/nav"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_nav_capsule"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/nav_chat"
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/nav_chat_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tab_chat" />
+                <TextView
+                    android:id="@+id/nav_chat_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|right"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/bg_badge_red"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="15dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/wx_text_white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/nav_chat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/tab_chat"
+                    android:textColor="@color/wx_nav_normal"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_contacts"
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/nav_contacts_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tab_contacts" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/nav_contacts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/tab_contacts"
+                    android:textColor="@color/wx_nav_normal"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_discover"
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/nav_discover_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tab_discover" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/nav_discover_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/tab_discover"
+                    android:textColor="@color/wx_nav_normal"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_me"
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/nav_me_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tab_me" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/nav_me_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/tab_me"
+                    android:textColor="@color/wx_nav_normal"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

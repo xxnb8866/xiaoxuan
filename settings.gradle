@@ -1,0 +1,64 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+/*
+ * 按「当前实际运行的 Gradle 版本」精确挑选 Android Gradle Plugin。
+ *
+ * 关键：AGP 每个版本都有「最低 Gradle 版本」硬要求，只按 8.x/9.x 大版本
+ * 分类是不够的 —— 例如 Gradle 8.10.2 配上 AGP 8.13 就会报
+ * "Minimum supported Gradle version is 8.13"，直接卡在配置阶段。
+ * 所以这里维护一张 [AGP 版本, 最低 Gradle 要求] 表，从高到低挑选第一个
+ * 满足「当前 Gradle >= 最低要求」的版本。
+ */
+gradle.ext.agpTable = [
+        // [AGP 版本, 该 AGP 所需的最低 Gradle 版本]
+        ["9.3.0",  "9.3"    ],
+        ["9.2.0",  "9.2"    ],
+        ["9.1.1",  "9.1"    ],
+        ["9.0.1",  "9.0"    ],
+        ["8.13.0", "8.13"   ],
+        ["8.7.3",  "8.9"    ],
+        ["8.6.1",  "8.7"    ],
+        ["8.5.2",  "8.7"    ],
+        ["8.4.2",  "8.6"    ],
+        ["8.3.2",  "8.4"    ],
+        ["8.2.2",  "8.1.1"  ],
+        ["8.1.4",  "8.0"    ],
+        ["7.4.2",  "7.5"    ],
+]
+
+/** 把 "8.10.2" 这类字符串转成可比较的整数：8.10.2 -> 8_010_002 */
+gradle.ext.verCode = { String v ->
+    int major = 0, minor = 0, patch = 0
+    String[] parts = v.tokenize('.')
+    if (parts.size() > 0) major = (parts[0].find(/\d+/) ?: "0") as int
+    if (parts.size() > 1) minor = (parts[1].find(/\d+/) ?: "0") as int
+    if (parts.size() > 2) patch = (parts[2].find(/\d+/) ?: "0") as int
+    return major * 1000000 + minor * 1000 + patch
+}
+
+/** 得到候选 AGP 列表（满足最低 Gradle 要求，从高到低） */
+gradle.ext.agpCandidates = { ->
+    int cur = gradle.ext.verCode(gradle.gradleVersion)
+    List<String> out = []
+    gradle.ext.agpTable.each { row ->
+        if (cur >= gradle.ext.verCode(row[1])) out.add(row[0])
+    }
+    return out
+}()
+
+rootProject.name = "WeChatAI"
+include ':app'

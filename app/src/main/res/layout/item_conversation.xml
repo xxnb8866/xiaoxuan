@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_list_item_transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/list_padding"
+        android:paddingRight="@dimen/list_padding">
+
+        <!-- 头像 + 未读角标 -->
+        <FrameLayout
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size">
+
+            <com.wechat.ai.widget.AvatarView
+                android:id="@+id/avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="A"
+                android:textColor="@color/wx_text_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/unread"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="-3dp"
+                android:layout_marginRight="-5dp"
+                android:background="@drawable/bg_badge_red"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minWidth="16dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/wx_text_white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- 名称 + 最后一条消息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/WxListTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text="AI 助手" />
+
+                <ImageView
+                    android:id="@+id/mute"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="4dp"
+                    android:contentDescription="免打扰"
+                    android:src="@drawable/ic_mute"
+                    android:visibility="gone"
+                    app:tint="@color/wx_text_hint" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/last"
+                style="@style/WxListSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:includeFontPadding="false"
+                android:text="你好" />
+        </LinearLayout>
+
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:includeFontPadding="false"
+            android:text="12:30"
+            android:textColor="@color/wx_text_hint"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- 分割线：从头像右侧开始（仿微信） -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/list_divider_start"
+        android:background="@color/wx_divider_light"
+        android:visibility="gone" />
+</LinearLayout>

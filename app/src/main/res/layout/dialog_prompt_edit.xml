@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="8dp"
+    android:paddingRight="20dp">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_round"
+        android:hint="名称，例如「毒舌损友」"
+        android:includeFontPadding="false"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/wx_text_primary"
+        android:textColorHint="@color/wx_text_hint"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edit_round"
+        android:gravity="top"
+        android:hint="提示词内容…"
+        android:lineSpacingExtra="3dp"
+        android:minLines="5"
+        android:padding="10dp"
+        android:textColor="@color/wx_text_primary"
+        android:textColorHint="@color/wx_text_hint"
+        android:textSize="14sp" />
+</LinearLayout>

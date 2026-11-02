@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <!-- 简洁盾牌 -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M12,3.6c4,1.5 6.4,3.4 6.4,5.4v4.4c0,3.4 -2.7,6.3 -6.4,7.4c-3.7,-1.1 -6.4,-4 -6.4,-7.4V9c0,-2 2.4,-3.9 6.4,-5.4z" />
+    <path android:fillColor="#FF9500"
+        android:pathData="M10.8,11.4l-1.3,1.3l-0.8,-0.8l-1.1,1.1l1.9,1.9l3.2,-3.2z" />
+</vector>

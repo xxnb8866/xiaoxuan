@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <!-- 相册：卡片 + 山与太阳 -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M4.2,5.4h15.6a1.5,1.5 0,0 1,1.5 1.5v10.2a1.5,1.5 0,0 1,-1.5 1.5H4.2a1.5,1.5 0,0 1,-1.5 -1.5V6.9a1.5,1.5 0,0 1,1.5 -1.5z" />
+    <path android:fillColor="#00C8C8" android:pathData="M6.6,14.4l3.4,-3.2l2.6,2.4l3,-2.8l3.2,3v2.2H6.6z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M15.4,8.6m-1.3,0a1.3,1.3 0,1 1,2.6 0a1.3,1.3 0,1 1,-2.6 0" />
+    <path android:fillColor="#00C8C8" android:pathData="M6.6,7.6h4.6v1.4H6.6z" />
+</vector>
